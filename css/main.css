@@ -335,3 +335,50 @@ header .sub-menu li a:hover {
     top: 0;
     left: 0;
 }
+
+.section--feature .tiles {
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.section--feature .tiles .inner {
+    max-width: 1200px;
+}
+
+.section--feature .tiles ul {
+    /* grid를 사용하면 편하지만 최신기술이기에 구형 브라우저에서는 정상적으로 작동되지 않는다. */
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr); */
+}
+
+.section--feature .tiles li {
+    padding: 34px 24px;
+    text-align: center;
+    line-height: 1.5;
+    border-right: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    /* 구형브라우저 지원을 할 경우 float 사용 */
+    /* float: left;
+    width: 25%; */
+}
+
+.section--feature .tiles li:last-child {
+    border-right: 0;
+}
+
+.section--feature .tiles li img {
+    max-width: 100%;
+    padding: 14px 10% 24px;
+    box-sizing: border-box;
+}
+
+.section--feature .tiles li h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.section--feature .tiles li p {
+    font-size: 14px;
+    color: #767676;
+}
