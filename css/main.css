@@ -30,10 +30,29 @@ a {
 
 }
 .summary__title {
-
+    font-size: 38px;
+    font-weight: 300;
+    line-height: 1.25;
+    margin-bottom: 18px;
 }
 .summary__description {
-    
+    font-size: 26px;
+    font-weight: 300;
+    color: #767676;
+    line-height: 1.5;
+}
+
+/* SECTION / INNER */
+.section {
+    /* 넓은 범위의 영역에서는 positon으로 인한 문제를 방지하기위해 relative를 정의해 주는 것이 좋다. */
+    position: relative;
+}
+.section .inner {
+    max-width: 980px;
+    /* 가로 사이즈가 정의돼 있어야지만 사용 가능하다. */
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: relative;
 }
 
 /* BTN */
@@ -118,11 +137,8 @@ header {
 }
 
 header .inner {
-    max-width: 980px;
     /* inner에 넣는 이유는 header에 두 번 써야 되는 것을 줄일 수 있다. */
     height: 78px;
-    /* 가로 사이즈가 정의돼 있어야지만 사용 가능하다. */
-    margin: 0 auto;
 }
 
 /* inner은 특정 영역 내부에서 가운데 정렬 및 범위 설정의 용도로 사용되고 이후 다른 기능들과의 연관성이 떨어져 아래 속성정의에서는 inner을 제외하고 작성하였다. */
@@ -213,5 +229,35 @@ header .sub-menu li a:hover {
 
 /* VISUAL */
 .section--visual {
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: cover;
+}
 
+.section--visual::before {
+    content: "";
+    position: absolute;
+    /* 모든 방향에 0을 주면 width:100%, height:100% 와 같은 효과를 줄 수 있다. */
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,.3);
+}
+
+.section--visual .inner {
+    padding: 160px 0;
+}
+
+.section--visual .summary__title {
+    color: #fff;
+    font-size: 54px;
+    /* 텍스트에 그림자 : text-shadow / 요소에 그림자 : box-shadow */
+    text-shadow: 0 1px 1px rgba(0,0,0,.25),
+                 0 1px 25px rgba(0,0,0,.75);
+}
+
+.section--visual .summary__description {
+    color: #fff;
 }
