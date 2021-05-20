@@ -6,6 +6,25 @@
     color: #333;
 }
 
+a {
+    text-decoration: none;
+}
+
+/* FLOAT CLEARFIX */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.float--left {
+    float: left;
+}
+
+.float--right {
+    float: right;
+}
+
 /* BTN */
 .btn {
     height: 34px;
@@ -21,6 +40,7 @@
     cursor: pointer;
     box-sizing: border-box;
     position: relative;
+    color: #333;
 }
 
 .btn:hover::before {
@@ -78,3 +98,104 @@
 /* .input--text::-o-input-placeholder {
     color: red;
 } */
+
+/* HEADER */
+header {
+    border-botton: 1px solid rgba(0,0,0,.7);
+    box-shadow: 0 0 5px rgba(0,0,0,.75);
+    background: #FFF;
+}
+
+header .inner {
+    max-width: 980px;
+    /* inner에 넣는 이유는 header에 두 번 써야 되는 것을 줄일 수 있다. */
+    height: 78px;
+    /* 가로 사이즈가 정의돼 있어야지만 사용 가능하다. */
+    margin: 0 auto;
+}
+
+/* inner은 특정 영역 내부에서 가운데 정렬 및 범위 설정의 용도로 사용되고 이후 다른 기능들과의 연관성이 떨어져 아래 속성정의에서는 inner을 제외하고 작성하였다. */
+header .menu-group {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+header .logo {
+    margin-right: 10px;
+}
+
+/* 백그라운드 속성으로 이미지를 넣게되면 alt로 대체택스가 나오지 않기에 a태그를 지우면 안된다. */
+header .logo a {
+    display: block;
+    background: url("../img/logo.svg");
+    width: 32px;
+    height: 32px;
+    /* -9999는 명시적인 의미로 텍스트를 사라지게 하는 것 (약속) */
+    text-indent: -9999px;
+}
+
+header .logo a:hover {
+    background: url("../img/logo_on.svg");
+}
+
+
+header .main-menu {
+    display: flex;
+}
+
+/* li 태그에 padding을 넣으면 선택영역이 늘어나지 않으니 주의할 것 */
+header .main-menu li a {
+    display: block;
+    padding: 10px;
+    color: #3c4146;
+}
+
+header .main-menu li a:hover {
+    color: #4078c0;
+}
+
+header .sign-group {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+header .btn-group {
+    order: 2;
+    /* 엔터 한 개를 띄어쓰기 한 개로 인식해서 원하지 않는 빈 공간이 생긴다. 이럴때 명시적으로 수평으로 만들어주면 문제가 해결된다. */
+    display: flex;
+}
+
+header .btn-group .sign-in {
+    margin-right: 4px;
+}
+
+/* id는 하나밖에 없는 고유의 값이기 때문에 부모/조상요소의 선택자를 붙일 필요가 없다. */
+#search-form {
+    order: 1;
+    margin-right: 12px;
+}
+
+#search {
+    width: 160px;
+    font-size: 14px;
+}
+
+#search + [type="submit"] {
+    display: none;
+}
+
+header .sub-menu {
+    display: flex;
+    margin-right: 10px;
+}
+
+header .sub-menu li a {
+    display: block;
+    padding: 10px;
+}
+
+header .sub-menu li a:hover {
+    color: #4078c0;
+}
