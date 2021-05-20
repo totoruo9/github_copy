@@ -16,7 +16,7 @@
     align-items: center;
     padding: 0 12px;
     font-size: 14px;
-    font-wight: 500;
+    font-weight: 500;
     line-height: 1.5;
     cursor: pointer;
     box-sizing: border-box;
@@ -77,4 +77,4 @@
 /* 오페라 / 오페라에서는 placeholder을 지원하지 않는다. */
 /* .input--text::-o-input-placeholder {
     color: red;
-  } */
+} */
