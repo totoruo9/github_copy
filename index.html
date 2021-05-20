@@ -41,10 +41,22 @@
     <link rel="apple-touch-icon" href="favicon.png">
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- reset.css 설정 / 호출 순서는 우리가 직접 작성한 파일에 덮어써져서 작동되지 않는 오류가 생기지 않게 상단에 적용할 것 / 파일에서 가져올 수 도 있고 웹 CDN을 이용한 가져오기도 가능 / min파일을 가져오면 압축된 형태로 가져올 수 있다. -->
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" integrity="sha512-IJEbgDEF7OeKJRa0MY2PApnyJHRIsgzCveek4ec8VWQ+7KG3ZSKVNYa5xP/Gh0hVP0Mwb+gBsk+GwR3JQGhQNg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- main.css 적용 -->
     <link rel="stylesheet" href="css/main.css">
+
+    
 </head>
 <body>
     Hello World
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
 </body>
 </html>
