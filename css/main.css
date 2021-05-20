@@ -30,7 +30,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, .7);
+    background: rgba(0, 0, 0, .07);
 }
 
 .btn.btn--primary {
@@ -38,3 +38,43 @@
     color: #fff;
     background: #55a532 linear-gradient(#91dd70, #55ae2e);
 }
+
+/* INPUT TEXT */
+.input--text {
+    height: 34px;
+    padding: 0 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .075);
+    font-size: 16px;
+}
+
+.input--text:focus {
+    border-color: #51a7e8;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .075),
+        0 0 5px rgba(81, 167, 232, .5);
+}
+
+/* placeholder 색상을 바꾸는 것은 표준 기술 아님 */
+/* Vendor Prefix (브라우저 업체별 접두사) */
+/* 크롬 */
+.input--text::-webkit-input-placeholder {
+    color: #cacaca;
+}
+
+/* 마이크로소프트 */
+.input--text::-ms-input-placeholder {
+    color: #cacaca;
+}
+
+/* 모질라 */
+.input--text::-moz-input-placeholder {
+    color: #cacaca;
+}
+
+/* 오페라 / 오페라에서는 placeholder을 지원하지 않는다. */
+/* .input--text::-o-input-placeholder {
+    color: red;
+  } */
